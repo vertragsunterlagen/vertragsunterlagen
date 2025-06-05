@@ -1,141 +1,58 @@
-<section class="cabinet">
-        
-<aside class="cabinet__menu">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KYC Verification</title>
+  <script src="https://static.sumsub.com/idensic/static/sns-websdk-builder.js"></script>
+</head>
+<body>
 
-    <nav class="cabinet__menu-navigation" style="padding-top: 0 !important;">
-        <ul class="cabinet__menu-ul nav">
-            <li class="cabinet__menu-li ">
-                <a href="/app/cabinet">
-                    <div class="cabinet__menu-ico">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22 8.52V3.98C22 2.57 21.36 2 19.77 2H15.73C14.14 2 13.5 2.57 13.5 3.98V8.51C13.5 9.93 14.14 10.49 15.73 10.49H19.77C21.36 10.5 22 9.93 22 8.52Z" fill="currentColor"></path>
-                            <path d="M22 19.77V15.73C22 14.14 21.36 13.5 19.77 13.5H15.73C14.14 13.5 13.5 14.14 13.5 15.73V19.77C13.5 21.36 14.14 22 15.73 22H19.77C21.36 22 22 21.36 22 19.77Z" fill="currentColor"></path>
-                            <path d="M10.5 8.52V3.98C10.5 2.57 9.86 2 8.27 2H4.23C2.64 2 2 2.57 2 3.98V8.51C2 9.93 2.64 10.49 4.23 10.49H8.27C9.86 10.5 10.5 9.93 10.5 8.52Z" fill="currentColor"></path>
-                            <path d="M10.5 19.77V15.73C10.5 14.14 9.86 13.5 8.27 13.5H4.23C2.64 13.5 2 14.14 2 15.73V19.77C2 21.36 2.64 22 4.23 22H8.27C9.86 22 10.5 21.36 10.5 19.77Z" fill="currentColor"></path>
-                        </svg>
-                    </div>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li class="cabinet__menu-li">
-                <a href="/app/balances">
-                    <div class="cabinet__menu-ico">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 8.00007V4.50073C16 3.66899 16 3.25312 15.8248 2.99755C15.6717 2.77425 15.4346 2.62257 15.1678 2.57715C14.8623 2.52517 14.4847 2.69944 13.7295 3.04799L4.85901 7.14206C4.18551 7.45291 3.84875 7.60834 3.60211 7.84939C3.38406 8.06249 3.21762 8.32262 3.1155 8.6099C3 8.93486 3 9.30575 3 10.0475V15.0001M16.5 14.5001H16.51M3 11.2001L3 17.8001C3 18.9202 3 19.4802 3.21799 19.9081C3.40973 20.2844 3.71569 20.5903 4.09202 20.7821C4.51984 21.0001 5.07989 21.0001 6.2 21.0001H17.8C18.9201 21.0001 19.4802 21.0001 19.908 20.7821C20.2843 20.5903 20.5903 20.2844 20.782 19.9081C21 19.4802 21 18.9202 21 17.8001V11.2001C21 10.08 21 9.51992 20.782 9.09209C20.5903 8.71577 20.2843 8.40981 19.908 8.21806C19.4802 8.00007 18.9201 8.00007 17.8 8.00007L6.2 8.00007C5.0799 8.00007 4.51984 8.00007 4.09202 8.21806C3.7157 8.40981 3.40973 8.71577 3.21799 9.09209C3 9.51991 3 10.08 3 11.2001ZM17 14.5001C17 14.7762 16.7761 15.0001 16.5 15.0001C16.2239 15.0001 16 14.7762 16 14.5001C16 14.2239 16.2239 14.0001 16.5 14.0001C16.7761 14.0001 17 14.2239 17 14.5001Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </div>
-                    <span>My Wallet</span>
-                </a>
-            </li>
-            <li class="cabinet__menu-li ">
-                <a href="/app/profile">
-                    <div class="cabinet__menu-ico">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 20C5.33579 17.5226 8.50702 16 12 16C15.493 16 18.6642 17.5226 21 20M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </div>
-                    <span>Accounts</span>
-                </a>
-            </li>
-            <li class="cabinet__menu-li ">
-                <a href="/buycrypto/start">
-                    <div class="cabinet__menu-ico">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.5 7.5H13.75C14.9926 7.5 16 8.50736 16 9.75C16 10.9926 14.9926 12 13.75 12H9.5H14.25C15.4926 12 16.5 13.0074 16.5 14.25C16.5 15.4926 15.4926 16.5 14.25 16.5H9.5M9.5 7.5H8M9.5 7.5V16.5M9.5 16.5H8M10 6V7.5M10 16.5V18M13 6V7.5M13 16.5V18M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </div>
-                    <span>Buy crypto</span>
-                </a>
-            </li>
-            <li class="cabinet__menu-li ">
-                <a href="/app/transfer">
-                    <div class="cabinet__menu-ico">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.5295 8.35186C12.9571 8.75995 12.2566 9 11.5 9C9.567 9 8 7.433 8 5.5C8 3.567 9.567 2 11.5 2C12.753 2 13.8522 2.65842 14.4705 3.64814M6 20.0872H8.61029C8.95063 20.0872 9.28888 20.1277 9.61881 20.2086L12.3769 20.8789C12.9753 21.0247 13.5988 21.0388 14.2035 20.9214L17.253 20.3281C18.0585 20.1712 18.7996 19.7854 19.3803 19.2205L21.5379 17.1217C22.154 16.5234 22.154 15.5524 21.5379 14.9531C20.9832 14.4134 20.1047 14.3527 19.4771 14.8103L16.9626 16.6449C16.6025 16.9081 16.1643 17.0498 15.7137 17.0498H13.2855L14.8311 17.0498C15.7022 17.0498 16.4079 16.3633 16.4079 15.5159V15.2091C16.4079 14.5055 15.9156 13.892 15.2141 13.7219L12.8286 13.1417C12.4404 13.0476 12.0428 13 11.6431 13C10.6783 13 8.93189 13.7988 8.93189 13.7988L6 15.0249M20 6.5C20 8.433 18.433 10 16.5 10C14.567 10 13 8.433 13 6.5C13 4.567 14.567 3 16.5 3C18.433 3 20 4.567 20 6.5ZM2 14.6L2 20.4C2 20.9601 2 21.2401 2.10899 21.454C2.20487 21.6422 2.35785 21.7951 2.54601 21.891C2.75992 22 3.03995 22 3.6 22H4.4C4.96005 22 5.24008 22 5.45399 21.891C5.64215 21.7951 5.79513 21.6422 5.89101 21.454C6 21.2401 6 20.9601 6 20.4V14.6C6 14.0399 6 13.7599 5.89101 13.546C5.79513 13.3578 5.64215 13.2049 5.45399 13.109C5.24008 13 4.96005 13 4.4 13L3.6 13C3.03995 13 2.75992 13 2.54601 13.109C2.35785 13.2049 2.20487 13.3578 2.10899 13.546C2 13.7599 2 14.0399 2 14.6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
+  <h2>KYC Verification</h2>
+  <div id="sumsub-websdk-container" style="width: 100%; height: 700px;"></div>
 
-                    </div>
-                    <span>Exchange</span>
-                </a>
-            </li>
+  <script>
+    const accessToken = "_act-jwt-eyJhbGciOiJub25lIn0.eyJqdGkiOiJfYWN0LTkwYzJkMDczLTM5ZGYtNDM5MC1iMmY1LTZkNDYyZWYxZWM1OCIsInVybCI6Imh0dHBzOi8vYXBpLnN1bXN1Yi5jb20ifQ.";
 
-            
-            <li class="cabinet__menu-li ">
+    function launchSumsubSDK() {
+      const snsWebSdk = window.snsWebSdk.init(accessToken, () => Promise.resolve(accessToken))
+        .withConf({
+          lang: 'en',
+          i18n: {
+            document: {
+              subTitles: {
+                IDENTITY: "Upload a document that proves your identity"
+              }
+            }
+          },
+          onMessage: (type, payload) => {
+            console.log("Message:", type, payload);
+          },
+          onError: (error) => {
+            console.error("KYC Error:", error);
+          }
+        })
+        .withOptions({
+          addViewportTag: false,
+          adaptIframeHeight: true
+        })
+        .on('stepCompleted', (payload) => {
+          console.log("Step Completed:", payload);
+        })
+        .onMessage((type, payload) => {
+          if (payload.reviewResult && payload.reviewResult.reviewAnswer === 'GREEN') {
+            alert("KYC Approved!");
+          } else if (payload.reviewResult && payload.reviewResult.reviewAnswer === 'RED') {
+            alert("KYC Rejected.");
+          }
+        })
+        .build();
 
-                <a href="/app/withdrawal">
-                    <div class="cabinet__menu-ico">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 20V13M12 20V10M4 20L4 16M13.4067 5.0275L18.5751 6.96567M10.7988 5.40092L5.20023 9.59983M21.0607 6.43934C21.6464 7.02513 21.6464 7.97487 21.0607 8.56066C20.4749 9.14645 19.5251 9.14645 18.9393 8.56066C18.3536 7.97487 18.3536 7.02513 18.9393 6.43934C19.5251 5.85355 20.4749 5.85355 21.0607 6.43934ZM5.06066 9.43934C5.64645 10.0251 5.64645 10.9749 5.06066 11.5607C4.47487 12.1464 3.52513 12.1464 2.93934 11.5607C2.35355 10.9749 2.35355 10.0251 2.93934 9.43934C3.52513 8.85355 4.47487 8.85355 5.06066 9.43934ZM13.0607 3.43934C13.6464 4.02513 13.6464 4.97487 13.0607 5.56066C12.4749 6.14645 11.5251 6.14645 10.9393 5.56066C10.3536 4.97487 10.3536 4.02513 10.9393 3.43934C11.5251 2.85355 12.4749 2.85355 13.0607 3.43934Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </div>
-                    <span>Withdrawal</span>
-                </a>
-            </li>
+      snsWebSdk.launch("#sumsub-websdk-container");
+    }
 
-            <li class="cabinet__menu-li ">
+    launchSumsubSDK();
+  </script>
 
-                <a href="/app/transaction-history">
-                    <div class="cabinet__menu-ico">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 5C13 6.10457 10.5376 7 7.5 7C4.46243 7 2 6.10457 2 5M13 5C13 3.89543 10.5376 3 7.5 3C4.46243 3 2 3.89543 2 5M13 5V6.5M2 5V17C2 18.1046 4.46243 19 7.5 19M7.5 11C7.33145 11 7.16468 10.9972 7 10.9918C4.19675 10.9 2 10.0433 2 9M7.5 15C4.46243 15 2 14.1046 2 13M22 11.5C22 12.6046 19.5376 13.5 16.5 13.5C13.4624 13.5 11 12.6046 11 11.5M22 11.5C22 10.3954 19.5376 9.5 16.5 9.5C13.4624 9.5 11 10.3954 11 11.5M22 11.5V19C22 20.1046 19.5376 21 16.5 21C13.4624 21 11 20.1046 11 19V11.5M22 15.25C22 16.3546 19.5376 17.25 16.5 17.25C13.4624 17.25 11 16.3546 11 15.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-
-                    </div>
-                    <span>Transaction history</span>
-                </a>
-            </li>
-
-            <li class="cabinet__menu-li cabinet__menu-li--line"></li>
-            <li class="cabinet__menu-li">
-                <a href="/">
-                    <div class="cabinet__menu-ico">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 11.5001L11 13.5001L15.5 9.00011M20 12.0001C20 16.9086 14.646 20.4785 12.698 21.615C12.4766 21.7442 12.3659 21.8087 12.2097 21.8422C12.0884 21.8682 11.9116 21.8682 11.7903 21.8422C11.6341 21.8087 11.5234 21.7442 11.302 21.615C9.35396 20.4785 4 16.9086 4 12.0001V7.21772C4 6.4182 4 6.01845 4.13076 5.67482C4.24627 5.37126 4.43398 5.10039 4.67766 4.88564C4.9535 4.64255 5.3278 4.50219 6.0764 4.22146L11.4382 2.21079C11.6461 2.13283 11.75 2.09385 11.857 2.07839C11.9518 2.06469 12.0482 2.06469 12.143 2.07839C12.25 2.09385 12.3539 2.13283 12.5618 2.21079L17.9236 4.22146C18.6722 4.50219 19.0465 4.64255 19.3223 4.88564C19.566 5.10039 19.7537 5.37126 19.8692 5.67482C20 6.01845 20 6.4182 20 7.21772V12.0001Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </div>
-                    <span>Mainpage</span>
-                </a>
-            </li>
-            <li class="cabinet__menu-li ">
-                <a href="/app/support">
-                    <div class="cabinet__menu-ico">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13M12 17H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </div>
-                    <span>Help Centre</span>
-                </a>
-            </li>
-
-            <li class="cabinet__menu-li">
-                <a href="/site/logout" data-confirm="Are you sure?" data-method="post"><div class="cabinet__menu-ico"><svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.84146C0 1.71988 1.71988 0 3.84146 0H9.76829C11.8899 0 13.6098 1.71988 13.6098 3.84146V4.32439H11.1951V3.84146C11.1951 3.05345 10.5563 2.41463 9.76829 2.41463H3.84146C3.05345 2.41463 2.41463 3.05345 2.41463 3.84146V14.1585C2.41463 14.9466 3.05345 15.5854 3.84146 15.5854H9.76829C10.5563 15.5854 11.1951 14.9466 11.1951 14.1585V13.2303H13.6098V14.1585C13.6098 16.2801 11.8899 18 9.76829 18H3.84146C1.71988 18 0 16.2801 0 14.1585V3.84146ZM9.16463 10.0976H4.5V7.2439H9.16463V4.66386L15.9146 8.56097L9.16463 12.4581V10.0976Z" fill="currentColor"></path> </svg></div> <span>Sign out</span></a>                            </li>
-        </ul>
-    </nav>
-
-    <a href="" class="cabinet__suport">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 18V12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12V18" stroke="#0C0B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M21 19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H18C17.4696 21 16.9609 20.7893 16.5858 20.4142C16.2107 20.0391 16 19.5304 16 19V16C16 15.4696 16.2107 14.9609 16.5858 14.5858C16.9609 14.2107 17.4696 14 18 14H21V19ZM3 19C3 19.5304 3.21071 20.0391 3.58579 20.4142C3.96086 20.7893 4.46957 21 5 21H6C6.53043 21 7.03914 20.7893 7.41421 20.4142C7.78929 20.0391 8 19.5304 8 19V16C8 15.4696 7.78929 14.9609 7.41421 14.5858C7.03914 14.2107 6.53043 14 6 14H3V19Z" stroke="#0C0B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <span>Contact Support</span>
-    </a>
-
-    <div class="cabinet__menu-info">
-        <div class="cabinet__menu-info__ava">
-
-        </div>
-        <div class="cabinet__menu-info__desc">
-            <div class="cabinet__menu-name">Joachim Albert</div>
-            <div class="cabinet__menu-email">nextterminal3@tutamail.com</div>
-        </div>
-    </div>
-</aside>
-        <div class="cabinet__body">
-                        
-<div class="ec-cabinet__right">
-
-        <div id="sumsub-websdk-container" style="width:100% !important;"><iframe width="100%" scrolling="no" allow="camera; microphone; geolocation; clipboard-write" frameborder="0" src="https://api.sumsub.com/idensic/websdk.html?_=id_19391559" style="height: 772px;"></iframe></div>
-
-</div>
-        </div>
-    </section>
+</body>
+</html>
