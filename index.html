@@ -5,53 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KYC Verification</title>
   <script src="https://static.sumsub.com/idensic/static/sns-websdk-builder.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+      background: #f4f6f9;
+    }
+    #sumsub-websdk-container {
+      width: 100%;
+      max-width: 700px;
+      height: 700px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
 
   <h2>KYC Verification</h2>
-  <div id="sumsub-websdk-container" style="width: 100%; height: 700px;"></div>
+  <div id="sumsub-websdk-container"></div>
 
   <script>
     const accessToken = "_act-jwt-eyJhbGciOiJub25lIn0.eyJqdGkiOiJfYWN0LTkwYzJkMDczLTM5ZGYtNDM5MC1iMmY1LTZkNDYyZWYxZWM1OCIsInVybCI6Imh0dHBzOi8vYXBpLnN1bXN1Yi5jb20ifQ.";
 
-    function launchSumsubSDK() {
-      const snsWebSdk = window.snsWebSdk.init(accessToken, () => Promise.resolve(accessToken))
-        .withConf({
-          lang: 'en',
-          i18n: {
-            document: {
-              subTitles: {
-                IDENTITY: "Upload a document that proves your identity"
-              }
+    function launchSumsubSdk() {
+      const snsWebSdk = window.snsWebSdk.init(
+        accessToken,
+        () => Promise.resolve(accessToken) // for token refresh
+      )
+      .withConf({
+        lang: 'en',
+        i18n: {
+          document: {
+            subTitles: {
+              IDENTITY: "Upload a document that proves your identity"
             }
-          },
-          onMessage: (type, payload) => {
-            console.log("Message:", type, payload);
-          },
-          onError: (error) => {
-            console.error("KYC Error:", error);
           }
-        })
-        .withOptions({
-          addViewportTag: false,
-          adaptIframeHeight: true
-        })
-        .on('stepCompleted', (payload) => {
-          console.log("Step Completed:", payload);
-        })
-        .onMessage((type, payload) => {
-          if (payload.reviewResult && payload.reviewResult.reviewAnswer === 'GREEN') {
-            alert("KYC Approved!");
-          } else if (payload.reviewResult && payload.reviewResult.reviewAnswer === 'RED') {
-            alert("KYC Rejected.");
+        },
+        onMessage: (type, payload) => {
+          console.log("Message:", type, payload);
+        },
+        onError: (error) => {
+          console.error("Sumsub SDK Error:", error);
+        }
+      })
+      .withOptions({
+        addViewportTag: false,
+        adaptIframeHeight: true
+      })
+      .on('stepCompleted', (payload) => {
+        console.log("Step completed:", payload);
+      })
+      .onMessage((type, payload) => {
+        if (payload.reviewResult && payload.reviewResult.reviewAnswer) {
+          if (payload.reviewResult.reviewAnswer === 'GREEN') {
+            alert("✅ KYC Approved!");
+          } else if (payload.reviewResult.reviewAnswer === 'RED') {
+            alert("❌ KYC Rejected.");
           }
-        })
-        .build();
+        }
+      })
+      .build();
 
-      snsWebSdk.launch("#sumsub-websdk-container");
+      snsWebSdk.launch('#sumsub-websdk-container');
     }
 
-    launchSumsubSDK();
+    launchSumsubSdk();
   </script>
 
 </body>
